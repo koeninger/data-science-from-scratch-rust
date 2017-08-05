@@ -3,7 +3,7 @@ use rustplotlib::backend::Matplotlib;
 
 use std::f64::consts::PI;
 
-fn save_figure(fig: Figure, file: &str) {
+fn save_figure(fig: &Figure, file: &str) {
     let mut mpl = Matplotlib::new().unwrap();
     mpl.set_style("ggplot").unwrap();
 
@@ -49,7 +49,7 @@ fn readme() {
 
     let fig = make_readme_figure(&x, &y1, &y2);
 
-    save_figure(fig, "/tmp/simple.png");
+    save_figure(&fig, "/tmp/simple.png");
 }
 
 fn line() {
@@ -84,7 +84,7 @@ fn line() {
         .xlabel("model complexity");
 
     let fig = Figure::new().subplots(1, 1, vec![Some(ax)]);
-    save_figure(fig, "/tmp/line.png");
+    save_figure(&fig, "/tmp/line.png");
 }
 
 #[cfg(test)]
