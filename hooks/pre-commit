@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+cargo +nightly clippy
+cargo +nightly fmt
