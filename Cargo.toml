@@ -5,3 +5,4 @@ authors = ["cody koeninger <cody@koeninger.org>"]
 
 [dependencies]
 rustplotlib = "0.0.4"
+num = "0.1.40"
