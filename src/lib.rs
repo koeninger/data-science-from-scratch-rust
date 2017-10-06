@@ -4,6 +4,7 @@ extern crate num;
 
 mod visualize;
 mod linear_algebra;
+mod statistics;
 
 #[cfg(test)]
 mod tests {
